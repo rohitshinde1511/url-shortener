@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>All Shortened URLs</h1>
+    <ul>
+        {% for url in urls %}
+            <li>
+                <a href="/{{ url.short_id }}" target="_blank">{{ url.short_id }}</a>
+                → {{ url.original_url }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back</a>
+</body>
+</html>
